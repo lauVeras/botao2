@@ -1,0 +1,13 @@
+document.getElementById('btnCor').addEventListener('click', function() {
+    const texto = document.getElementById('texto');
+    // Aqui você pode alterar a cor para uma que tenha bom contraste
+    const cores = ['#FF6347', '#32CD32', '#1E90FF', '#FFD700', '#8A2BE2'];
+    const corAtual = texto.style.color;
+    let novaCor;
+
+    do {
+        novaCor = cores[Math.floor(Math.random() * cores.length)];
+    } while (novaCor === corAtual);  // Garantir que a cor não se repita
+
+    texto.style.color = novaCor;
+});
